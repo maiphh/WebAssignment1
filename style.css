@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;500;600;700&family=Lato:ital@0;1&display=swap');
+
+:root {
+  --grey: #3d3d3d;
+  --yellow: #ffd154;
+}
+
+/* Reset Css and add fonts*/
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Lato', sans-serif;
+
+}
+
+body {
+  background-color: var(--grey)
+}
+
+/* Header */
+nav {
+  height: 80px;
+  width: 100%;
+  background-color: #2a2a2a;
+  font-family: 'Ibarra Real Nova', serif;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+.logo a{
+  color: var(--yellow);
+  font-family: 'Ibarra Real Nova', serif;
+  font-size: 30px;
+  font-weight: 900;
+  padding-left: 25px;
+}
+nav ul {
+  float: right;
+  margin-right: 25px;
+}
+
+nav ul li,
+.logo {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a{
+  color: var(--yellow);
+  font-family: 'Ibarra Real Nova', serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 13px;
+  border-radius: 3px;
+}
+
+nav ul li a:hover {
+  background-color: var(--grey);
+  color: #e8e8e8;
+  transition: 0.5s;
+}
+
+.menu-icon {
+  cursor: pointer;
+  font-size: 28px;
+  float: right;
+  line-height: 80px;
+  color: var(--yellow);
+  margin-right: 40px;
+  display: none;
+}
+
+#menu {
+  display: none;
+}
+
+/* Mobile layout */
+@media (max-width: 960px) {
+  .menu-icon {
+    display: block;
+    }
+  nav ul {
+    width: 100%;
+    height: 100vh;
+    top: 80px;
+    text-align: center;
+    right: -100%;
+    transition: all .5s;
+    position: fixed;
+    background-color: #272727;
+    margin-right: 0;
+    z-index: 1;
+  }
+  nav ul li {
+    display: block;
+  }
+
+  nav ul li a {
+    padding: 10px 20vw;
+  }
+  #menu:checked ~ ul{
+    right: 0;
+  }
+
+}
+
+/* Main content */
+.slider {
+  margin-top: 80px;
+  background: url("asset/pic/book.png") top center / cover no-repeat;
+  padding-top: 50%;
+}
+/* Service */
+
+.service {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
+  grid-gap: 1.5rem;
+  margin: 20px 20px;
+
+
+}
+
+.service .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+.service .icon i{
+  font-size: 36px;
+  margin-right: 12px;
+  color: var(--yellow);
+}
+
+.service .icon h3 {
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+
+}
+
+.service .icon p {
+  color: #aaaaaa;
+  font-size: 12px;
+}
+
+/* Best sellers */
+
+.bestsellers {
+  margin-top: 100px;
+}
+
+.bestsellers-wrapper{
+margin: 50px 20px 0 20px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.bestsellers h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  color: var(--yellow);
+  font-family: 'Ibarra Real Nova', serif;
+  text-align: center;
+
+
+}
+
+.bestsellers a h2:hover {
+  opacity: 0.6;
+  transition: 0.5s;
+}
+
+.bestsellers-wrapper .image-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 50px;
+
+}
+
+
+
+.bestsellers-wrapper .book img{
+display: block;
+}
+
+.book .book-name {
+  text-align: center;
+  margin-top: 15px;
+
+}
+
+.book .book-name h3 {
+  color: white;
+  font-size: 16px;
+}
+
+.book .book-name p {
+    color: #aaaaaa;
+    font-size: 14px;
+}
+
+.bestsellers-wrapper img {
+  display: block;
+  height: 300px;
+  width: 240px;
+
+}
+
+.bestsellers-wrapper img:hover {
+  opacity: 0.6;
+  transition: 0.5s;
+}
+
+.book .book-name h3:hover {
+  color: var(--yellow);
+  transition: 0.5s;
+}
+
+@media (max-width: 960px) {
+  .bestsellers-wrapper .image-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+footer {
+  margin-top: 100px;
+
+}
+.footer-nav {
+  height: 150px;
+  width: 100%;
+  background-color: #2a2a2a;
+
+
+}
+
+.footer-nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-nav ul li {
+  display: inline-block;
+  line-height: 150px;
+}
+
+.footer-nav ul li a {
+  font-family: 'Ibarra Real Nova', serif;
+  color: var(--yellow);
+  font-size: 16px;
+  margin: 0 20px;
+  text-transform: uppercase;
+
+}
+
+.footer-nav ul li a:hover {
+  opacity: 0.6;
+  transition: 0.5s;
+}
+
+@media (max-width :960px) {
+.footer-nav ul li a {
+    font-size: 12px;
+    margin: 0 15px;
+}
+
+}
+
+@media (max-width :600px) {
+.footer-nav ul li a {
+    font-size: 8px;
+    margin: 0 5px;
+}
+
+}
+
+/* Catergory page */
+.bestseller-slider {
+  margin-top: 80px;
+  background: url("asset/pic/bestseller.png") top center / cover no-repeat;
+  padding-top: 50%;
+}
+
+/* Book detail page */
+
+.content-detail{
+  margin-top: 120px;
+  margin-left: 40px;
+}
+
+
+.breadcrumb a {
+  color: #a3a3a3;
+
+}
+
+.breadcrumb a:hover {
+  color: var(--yellow);
+  transition: 0.5s;
+}
+
+.breadcrumb h3 {
+  color: var(--yellow)
+}
+
+.placeholder {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 480px 160px 400px;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  align-items: center;justify-content: center;
+}
+
+.placeholder img {
+  width: 160px;
+  height:190px;
+  margin: 5px 0;
+
+
+}
+
+.placeholder .bookaholic {
+  grid-row: 1/3;;
+  height: 600px;
+  width: 480px;
+}
+
+.placeholder .sub-book {
+  grid-row: 1/-1;
+  grid-column: 2/3;
+}
+
+.placeholder h2 {
+  font-size: 48px;
+  text-align: center;
+  margin-top: 180px;
+  color: var(--yellow);
+}
+
+.placeholder button {
+  margin: 100px;
+  cursor: pointer;
+  border-radius: 3px;
+  color: white;
+  background-color: var(--yellow);
+  font-size: 24px;
+  font-weight: bold;
+  padding: 20px;
+
+}
+
+.placeholder button:hover {
+  opacity: 0.6;
+  transition: 0.5s;
+}
+
+@media (max-width: 960px) {
+  .placeholder {
+    display: block;
+    margin-left: auto;
+  margin-right: auto;
+  width: 70%
+  }
+
+  .placeholder button {
+    display: flex;
+    margin: auto;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .placeholder h2 {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 750px) {
+  .placeholder .sub-book img{
+    width: 120px;
+    height: 150px;
+  }
+
+  .placeholder .bookaholic {
+    width: 365px;
+    height: 460px;
+  }
+
+}
+
+.book-detail {
+  margin-top: 50px;
+  width: 80%;
+}
+
+.book-detail h1{
+  color: var(--yellow);
+  font-size: 48px;
+}
+
+.book-detail p {
+  margin-top: 10px;
+  color:#aaaaaa;
+}
+
+/* contact page */
+
+.contact {
+  margin-top: 80px;
+  margin: 50px 11%;
+}
+
+.contact h1 {
+  color: var(--yellow);
+    font-family: 'Ibarra Real Nova', serif;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+#fullname, select, textarea, #email,#phone{
+  width: 84%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 25px;
+  resize: vertical;
+
+}
+
+.note-area #note {
+  width: 100%;
+}
+
+form label,p {
+  color: var(--yellow)
+}
+
+.checkbox-input {
+  color: white;
+  margin-right: 15px;
+}
+
+
+
+.radio-input {
+  color: white;
+  margin-right: 50px;
+}
+
+
+
+.input-contact-way, .recieve-newsletter {
+  margin: 15px 0;
+}
+
+.input-submit, .input-reset {
+  display: inline-block;
+
+}
+
+.btn {
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#submit-btn {
+  background-color: var(--yellow);
+  padding: 15px 40px;
+}
+
+#reset-btn {
+  background-color: #c9c9c9;
+  margin-left: 10px;
+}
+
+.inputfield {
+  float: right;
+}
+
+.input-purpose, .input-name, .input-email, .input-phone {
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 25px;
+}
+
+.input-phone label, .input-email label, .input-purpose label, .input-name label{
+  line-height: 50px;
+}
+@media (max-width:960px) {
+  #fullname, select, textarea, #email,#phone {
+    width: 100%;
+  }
+
+  .input-phone label, .input-email label, .input-purpose label, .input-name label{
+    line-height: 0;
+  }
+
+  .input-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
