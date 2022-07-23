@@ -487,11 +487,13 @@ form label,p {
 #submit-btn {
   background-color: var(--yellow);
   padding: 15px 40px;
+  cursor: pointer;
 }
 
 #reset-btn {
   background-color: #c9c9c9;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 .inputfield {
@@ -506,7 +508,10 @@ form label,p {
 
 .input-phone label, .input-email label, .input-purpose label, .input-name label{
   line-height: 50px;
+
+
 }
+
 @media (max-width:960px) {
   #fullname, select, textarea, #email,#phone {
     width: 100%;
