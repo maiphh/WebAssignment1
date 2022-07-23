@@ -1,7 +1,7 @@
 # WebAssignment1
 
 Website link:
-- 
+- https://maiphh.github.io/WebAssignment1/
 
 References :
 - https://www.freepik.com/psd/book-mockup
